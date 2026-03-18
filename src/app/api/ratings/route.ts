@@ -12,17 +12,19 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
   }
 
-  const body = (await request.json()) as { slug?: string; score?: number };
+  const body = (await request.json()) as { slug?: string; score?: unknown };
   const slug = body.slug?.trim();
-  const score = body.score;
+  const rawScore = body.score;
 
   if (!slug || !clawsBySlug[slug]) {
     return NextResponse.json({ message: "Invalid claw slug" }, { status: 400 });
   }
 
-  if (!Number.isInteger(score) || score < 1 || score > 10) {
+  if (typeof rawScore !== "number" || !Number.isInteger(rawScore) || rawScore < 1 || rawScore > 10) {
     return NextResponse.json({ message: "Score must be an integer from 1 to 10" }, { status: 400 });
   }
+
+  const score = rawScore;
 
   await db.clawRating.upsert({
     where: {
