@@ -1,12 +1,11 @@
-import { getServerSession } from "next-auth";
 import { ArenaGrid } from "@/components/arena-grid";
 import { JsonLd } from "@/components/json-ld";
 import { claws } from "@/data/claws";
-import { authOptions } from "@/lib/auth";
+import { getOptionalServerSession } from "@/lib/auth";
 import { getRatingSnapshot } from "@/lib/ratings";
 
 export default async function HomePage() {
-  const session = await getServerSession(authOptions);
+  const session = await getOptionalServerSession();
   const ratings = await getRatingSnapshot(session?.user?.id);
 
   return (

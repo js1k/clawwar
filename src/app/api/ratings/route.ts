@@ -1,11 +1,15 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { authOptions, hasAuthConfig } from "@/lib/auth";
 import { clawsBySlug } from "@/data/claws";
 import { db } from "@/lib/db";
 import { getRatingSnapshot } from "@/lib/ratings";
 
 export async function POST(request: Request) {
+  if (!hasAuthConfig()) {
+    return NextResponse.json({ message: "Auth/database configuration is incomplete" }, { status: 503 });
+  }
+
   const session = await getServerSession(authOptions);
 
   if (!session?.user?.id) {
@@ -26,23 +30,27 @@ export async function POST(request: Request) {
 
   const score = rawScore;
 
-  await db.clawRating.upsert({
-    where: {
-      clawSlug_userId: {
+  try {
+    await db.clawRating.upsert({
+      where: {
+        clawSlug_userId: {
+          clawSlug: slug,
+          userId: session.user.id
+        }
+      },
+      update: {
+        score
+      },
+      create: {
         clawSlug: slug,
+        score,
         userId: session.user.id
       }
-    },
-    update: {
-      score
-    },
-    create: {
-      clawSlug: slug,
-      score,
-      userId: session.user.id
-    }
-  });
+    });
 
-  const snapshot = await getRatingSnapshot(session.user.id);
-  return NextResponse.json(snapshot[slug]);
+    const snapshot = await getRatingSnapshot(session.user.id);
+    return NextResponse.json(snapshot[slug]);
+  } catch {
+    return NextResponse.json({ message: "Database is unavailable" }, { status: 503 });
+  }
 }

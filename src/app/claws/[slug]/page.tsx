@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getServerSession } from "next-auth";
 import { JsonLd } from "@/components/json-ld";
 import { RatingPanel } from "@/components/rating-panel";
 import { claws, clawsBySlug } from "@/data/claws";
-import { authOptions } from "@/lib/auth";
+import { getOptionalServerSession } from "@/lib/auth";
 import { getRatingSnapshot } from "@/lib/ratings";
 
 type ClawPageProps = {
@@ -44,7 +43,7 @@ export default async function ClawDetailPage({ params }: ClawPageProps) {
     notFound();
   }
 
-  const session = await getServerSession(authOptions);
+  const session = await getOptionalServerSession();
   const ratings = await getRatingSnapshot(session?.user?.id);
   const rating = ratings[claw.slug] ?? { average: 0, count: 0, userScore: null };
 
