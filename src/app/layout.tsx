@@ -40,7 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <Link className="text-3xl font-black uppercase tracking-[0.25em] text-bone" href="/">
                   Clawwar
                 </Link>
-                <p className="mt-1 text-sm text-bone/60">The ranking arena for nature's sharpest hardware.</p>
+                <p className="mt-1 text-sm text-bone/60">The ranking arena for nature&apos;s sharpest hardware.</p>
               </div>
               <AuthButton />
             </header>
