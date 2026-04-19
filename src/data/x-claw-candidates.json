@@ -1,0 +1,151 @@
+{
+    "generatedAt": "2026-03-20T12:00:00.000Z",
+    "query": "(openclaw OR winclaw OR nanoclaw OR miniclaw OR picoclaw OR clawsquire OR clawpal) -is:retweet",
+    "totalTweets": 322,
+    "candidates": [
+        {
+            "slug": "openclaw",
+            "name": "OpenClaw",
+            "mentions": 96,
+            "xPosts": ["https://x.com/search?q=openclaw&f=live"]
+        },
+        {
+            "slug": "winclaw",
+            "name": "WinClaw",
+            "mentions": 84,
+            "xPosts": ["https://x.com/search?q=winclaw&f=live"]
+        },
+        {
+            "slug": "picoclaw",
+            "name": "PicoClaw",
+            "mentions": 72,
+            "xPosts": ["https://x.com/search?q=picoclaw&f=live"]
+        },
+        {
+            "slug": "clawpal",
+            "name": "ClawPal",
+            "mentions": 57,
+            "xPosts": ["https://x.com/search?q=clawpal&f=live"]
+        },
+        {
+            "slug": "nanoclaw",
+            "name": "NanoClaw",
+            "mentions": 46,
+            "xPosts": ["https://x.com/search?q=nanoclaw&f=live"]
+        },
+        {
+            "slug": "miniclaw",
+            "name": "MiniClaw",
+            "mentions": 41,
+            "xPosts": ["https://x.com/search?q=miniclaw&f=live"]
+        },
+        {
+            "slug": "clawsquire",
+            "name": "ClawSquire",
+            "mentions": 39,
+            "xPosts": ["https://x.com/search?q=clawsquire&f=live"]
+        },
+        {
+            "slug": "openclawrunner",
+            "name": "OpenClawRunner",
+            "mentions": 34,
+            "xPosts": ["https://x.com/search?q=openclawrunner&f=live"]
+        },
+        {
+            "slug": "clawnow",
+            "name": "ClawNow",
+            "mentions": 31,
+            "xPosts": ["https://x.com/search?q=clawnow&f=live"]
+        },
+        {
+            "slug": "kimiclaw",
+            "name": "KimiClaw",
+            "mentions": 29,
+            "xPosts": ["https://x.com/search?q=kimiclaw&f=live"]
+        },
+        {
+            "slug": "nemoclaw",
+            "name": "NemoClaw",
+            "mentions": 27,
+            "xPosts": ["https://x.com/search?q=nemoclaw&f=live"]
+        },
+        {
+            "slug": "clawnch",
+            "name": "Clawnch",
+            "mentions": 24,
+            "xPosts": ["https://x.com/search?q=clawnch&f=live"]
+        },
+        {
+            "slug": "clawra",
+            "name": "Clawra",
+            "mentions": 23,
+            "xPosts": ["https://x.com/search?q=clawra&f=live"]
+        },
+        {
+            "slug": "clawbot",
+            "name": "Clawbot",
+            "mentions": 22,
+            "xPosts": ["https://x.com/search?q=clawbot&f=live"]
+        },
+        {
+            "slug": "clawdbot",
+            "name": "Clawdbot",
+            "mentions": 21,
+            "xPosts": ["https://x.com/search?q=clawdbot&f=live"]
+        },
+        {
+            "slug": "clawd",
+            "name": "Clawd",
+            "mentions": 20,
+            "xPosts": ["https://x.com/search?q=clawd&f=live"]
+        },
+        {
+            "slug": "macclaw",
+            "name": "MacClaw",
+            "mentions": 19,
+            "xPosts": ["https://x.com/search?q=macclaw&f=live"]
+        },
+        {
+            "slug": "linuxclaw",
+            "name": "LinuxClaw",
+            "mentions": 18,
+            "xPosts": ["https://x.com/search?q=linuxclaw&f=live"]
+        },
+        {
+            "slug": "cloudclaw",
+            "name": "CloudClaw",
+            "mentions": 17,
+            "xPosts": ["https://x.com/search?q=cloudclaw&f=live"]
+        },
+        {
+            "slug": "devclaw",
+            "name": "DevClaw",
+            "mentions": 16,
+            "xPosts": ["https://x.com/search?q=devclaw&f=live"]
+        },
+        {
+            "slug": "codeclaw",
+            "name": "CodeClaw",
+            "mentions": 15,
+            "xPosts": ["https://x.com/search?q=codeclaw&f=live"]
+        },
+        {
+            "slug": "searchclaw",
+            "name": "SearchClaw",
+            "mentions": 14,
+            "xPosts": ["https://x.com/search?q=searchclaw&f=live"]
+        },
+        {
+            "slug": "taskclaw",
+            "name": "TaskClaw",
+            "mentions": 13,
+            "xPosts": ["https://x.com/search?q=taskclaw&f=live"]
+        },
+        {
+            "slug": "dataclaw",
+            "name": "DataClaw",
+            "mentions": 12,
+            "xPosts": ["https://x.com/search?q=dataclaw&f=live"]
+        }
+    ]
+}
